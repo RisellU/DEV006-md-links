@@ -28,7 +28,7 @@ console.log(toAbsolute('test\\prueba\\READMEcopy.md'))
   function existingPath(absolutePath){
     try{
       if(!fs.existsSync(absolutePath)){
-        console.log("The path does not exist.")
+        console.log('The path does not exist.')
         return false;
       }
       return true;
@@ -40,10 +40,23 @@ console.log(toAbsolute('test\\prueba\\READMEcopy.md'))
   console.log(existingPath('C:\\Users\\Otros\\Desktop\\MD-LINKS\\DEV006-md-links\\test\\prueba\\READMEcopy.md'));
   //console.log(existingPath('C:\Users\Otros\Desktop\MD-LINKS\DEV006-md-links\test\prueba\READMEcopy.md'));
 
-
+// funcion para comprobar si es un archivo o directorio
+function isDirectoryOrFile(path){
+    try{
+        if(fs.statSync(path).isFile()){
+          console.log('Is a file')
+        }
+        return true;
+    } catch (error){
+        console.error(`error: ${error}`);
+        return false;
+    }
+} 
+console.log(isDirectoryOrFile('C:\\Users\\Otros\\Desktop\\MD-LINKS\\DEV006-md-links\\test\\prueba\\READMEcopy.md'))
 
 module.exports = {
     isAbsoluteRoute,
     toAbsolute,
-    existingPath
+    existingPath,
+    isDirectoryOrFile
 }
