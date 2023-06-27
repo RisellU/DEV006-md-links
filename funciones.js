@@ -53,6 +53,19 @@ function isDirectoryOrFile(path){
     }
 } 
 console.log(isDirectoryOrFile('C:\\Users\\Otros\\Desktop\\MD-LINKS\\DEV006-md-links\\test\\prueba\\READMEcopy.md'))
+//console.log(isDirectoryOrFile('test\\prueba\\READMEcopy.md'))
+
+// funcion creada para obtener la extensión del archivo
+function getMarkdown(file){
+    try{
+        const extension = path.extname(file)
+        return extension
+    } catch(error){
+        console.error('error: ', error)
+    }
+} 
+//console.log(getMarkdown('C:\\Users\\Otros\\Desktop\\MD-LINKS\\DEV006-md-links\\test\\prueba\\READMEcopy.md'))
+console.log(getMarkdown('test/prueba/text.txt'))
 
 module.exports = {
     isAbsoluteRoute,
