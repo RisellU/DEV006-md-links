@@ -11,5 +11,19 @@
   },
   "dependencies": {
     "axios": "^1.4.0"
-  }
+  },
+  "devDependencies": {
+    "jest": "^29.6.1"
+  },
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest --verbose --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
