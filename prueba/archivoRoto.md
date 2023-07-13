@@ -1,0 +1,1 @@
+[Generalidades del protocolo HTTP - MDN](https://developer.mozilla.org/es/docs/Web/HTTP/Overview),[Empezando con Jest - Documentación oficial](https://jestjs.i/es-ES/getting-started)
